@@ -159,7 +159,7 @@ function opendash() {
       cancelButtonText: 'ยกเลิก',
   }).then((result) => {
       if (result.isConfirmed) {
-          window.open('https://lookerstudio.google.com/reporting/4bb9eb62-ea62-414a-ac54-361840e6b4a1l', '_blank');
+          window.open('https://lookerstudio.google.com/reporting/4bb9eb62-ea62-414a-ac54-361840e6b4a1', '_blank');
       } else if (result.dismiss === Swal.DismissReason.cancel) {
           Swal.fire('การดำเนินการถูกยกเลิก', '', 'info');
       }
