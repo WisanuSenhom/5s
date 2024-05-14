@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กำลังเปลี่ยนเส้นทาง</title>
+</head>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+    // เมื่อหน้าเว็บโหลดเสร็จ
+    checkLocalStorage();
+});
+
+async function checkLocalStorage() {
+    // ตรวจสอบค่า uuid ใน local storage
+    var storedUUID = localStorage.getItem("uuid");
+
+    // ถ้าค่า uuid ไม่มีหรือเป็นค่าว่าง
+    if (!storedUUID || storedUUID.trim() === "") {
+        // ไปหน้า login
+        window.location.href = "https://wisanusenhom.github.io/nu/login.html";
+    }
+
+    getgoogleform()    
+}
+
+function getgoogleform() {
+    var userid = localStorage.getItem("userid");
+    var username = localStorage.getItem("name");
+   
+    window.location.replace(
+     `https://docs.google.com/forms/d/e/1FAIpQLSc1cimdHrA-g1eSPyYHz5oYDhyfnlOT49wyjIp_dryaX98RUQ/viewform?usp=pp_url
+     &entry.195620054=${new Date().toLocaleDateString('en-CA')}&entry.1595578753=${userid}&entry.1336093512=${username}`
+     );
+  }
+
+
+
+</script>
+<body>
+    
+</body>
+</html>
