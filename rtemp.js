@@ -129,3 +129,38 @@ function openWeb() {
       }
   });
 }
+
+function opendash() {
+  Swal.fire({
+      title: 'ยืนยันการดำเนินการ',
+      text: 'คลิก "ตกลง" เพื่อเปิดหน้าบันทึกข้อมูล',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'ตกลง',
+      cancelButtonText: 'ยกเลิก',
+  }).then((result) => {
+      if (result.isConfirmed) {
+          window.open('temp.html', '_blank');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire('การดำเนินการถูกยกเลิก', '', 'info');
+      }
+  });
+}
+
+// ห้องน้ำ
+function opendash() {
+  Swal.fire({
+      title: 'ยืนยันการดำเนินการ',
+      text: 'คลิก "ตกลง" เพื่อเปิดหน้าแสดงข้อมูล',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'ตกลง',
+      cancelButtonText: 'ยกเลิก',
+  }).then((result) => {
+      if (result.isConfirmed) {
+          window.open('https://lookerstudio.google.com/reporting/4bb9eb62-ea62-414a-ac54-361840e6b4a1l', '_blank');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire('การดำเนินการถูกยกเลิก', '', 'info');
+      }
+  });
+}
