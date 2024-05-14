@@ -147,7 +147,7 @@ function opendash() {
   });
 }
 
-// ห้องน้ำ
+// ตู้เย็น
 function opendash() {
   Swal.fire({
       title: 'ยืนยันการดำเนินการ',
@@ -158,7 +158,7 @@ function opendash() {
       cancelButtonText: 'ยกเลิก',
   }).then((result) => {
       if (result.isConfirmed) {
-          window.open('https://lookerstudio.google.com/reporting/4bb9eb62-ea62-414a-ac54-361840e6b4a1l', '_blank');
+          window.open('https://lookerstudio.google.com/reporting/f4108ec7-4b6c-42ed-a2ac-267f455e8d91', '_blank');
       } else if (result.dismiss === Swal.DismissReason.cancel) {
           Swal.fire('การดำเนินการถูกยกเลิก', '', 'info');
       }
