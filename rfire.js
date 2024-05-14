@@ -135,3 +135,21 @@ function openWeb() {
       }
   });
 }
+
+// ดับเพลิง
+function opendash() {
+  Swal.fire({
+      title: 'ยืนยันการดำเนินการ',
+      text: 'คลิก "ตกลง" เพื่อเปิดหน้าแสดงข้อมูล',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'ตกลง',
+      cancelButtonText: 'ยกเลิก',
+  }).then((result) => {
+      if (result.isConfirmed) {
+          window.open('https://lookerstudio.google.com/reporting/59437449-657d-4dbb-9297-a2e63b2204ae', '_blank');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire('การดำเนินการถูกยกเลิก', '', 'info');
+      }
+  });
+}
