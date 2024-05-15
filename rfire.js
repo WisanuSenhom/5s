@@ -14,21 +14,25 @@ async function checkLocalStorage() {
     }
 
     let timerInterval;
+    let startTime;
+    
     Swal.fire({
       title: "กำลังดาวน์โหลด...",
+      html: 'เวลา <b>0</b> วินาที',
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();
-        const timer = Swal.getPopup().querySelector("b");
+        const timer = Swal.getHtmlContainer().querySelector("b");
+        startTime = Date.now();
         timerInterval = setInterval(() => {
-          timer.textContent = `${Swal.getTimerLeft()}`;
+          const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+          timer.textContent = elapsedTime;
         }, 100);
       },
       willClose: () => {
         clearInterval(timerInterval);
       }
     }).then((result) => {
-      /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
         console.log("I was closed by the timer");
       }
