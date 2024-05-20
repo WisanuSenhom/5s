@@ -62,6 +62,7 @@ async function checkLocalStorage() {
         <td>${user.date}</td>
         <td>${user.office}</td>
         <td>${user.fireciful}</td>
+          <td>${user.score}</td>
         <td>${user.spray}</td>
         <td>${user.force}</td>
         <td>${user.body}</td>
@@ -82,6 +83,7 @@ async function checkLocalStorage() {
             { "data": 'date' },
             { "data": 'office' },
             { "data": 'fireciful' },
+             { "data": 'score' },
             { "data": 'spray' },
             { "data": 'force' },
             { "data": 'body' },
@@ -94,7 +96,7 @@ async function checkLocalStorage() {
         ],
         "processing": true,
         "responsive": true,
-        "order": [[11, 'asc'], [2, 'asc']],
+        "order": [[12, 'asc'], [2, 'asc']],
         "dom": 'lBfrtip',
         "lengthMenu": [[10, 30, 70, 100, 150,200, -1], [10, 30, 70, 100, 150,200, "ทั้งหมด"]],
         "buttons": [
