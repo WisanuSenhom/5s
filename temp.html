@@ -20,9 +20,10 @@ async function checkLocalStorage() {
     if (!storedUUID || storedUUID.trim() === "") {
         // ไปหน้า login
         window.location.href = "https://wisanusenhom.github.io/nu/login.html";
+    }else {
+        // ถ้าค่า uuid มีอยู่และไม่เป็นค่าว่าง
+        getgoogleform(); 
     }
-
-    getgoogleform()    
 }
 
 function getgoogleform() {
