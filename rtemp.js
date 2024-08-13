@@ -65,6 +65,7 @@ async function checkLocalStorage() {
         <td>${user.range}</td>
         <td>${user.temp}</td>
         <td>${user.opv}</td>
+         <td>${user.temproom}</td>
         <td>${user.air}</td>
         <td>${user.details}</td>
         <td>${user.name}</td>
@@ -84,6 +85,7 @@ async function checkLocalStorage() {
             { "data": 'range' },
             { "data": 'temp' },
             { "data": 'opv' },
+             { "data": 'temproom' },
             { "data": 'air' },
             { "data": 'details' },
             { "data": 'name' },
