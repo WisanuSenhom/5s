@@ -64,6 +64,8 @@ async function checkLocalStorage() {
         <td>${user.cool}</td>
         <td>${user.range}</td>
         <td>${user.temp}</td>
+        <td>${user.opv}</td>
+        <td>${user.air}</td>
         <td>${user.details}</td>
         <td>${user.name}</td>
         <td>${user.dupdate}</td>  
@@ -81,6 +83,8 @@ async function checkLocalStorage() {
             { "data": 'cool' },
             { "data": 'range' },
             { "data": 'temp' },
+            { "data": 'opv' },
+            { "data": 'air' },
             { "data": 'details' },
             { "data": 'name' },
             { "data": 'dupdate' },
@@ -88,7 +92,7 @@ async function checkLocalStorage() {
         ],
         "processing": true,
         "responsive": true,
-        "order": [[8, 'asc'], [2, 'asc']],
+        "order": [[10, 'asc'], [2, 'asc']],
         "dom": 'lBfrtip',
         "lengthMenu": [[10, 30, 70, 100, 150,200, -1], [10, 30, 70, 100, 150,200, "ทั้งหมด"]],
         "buttons": [
